@@ -1,133 +1,132 @@
-/*This is the CSS document, the thing that controls all the style of the website*/
+/* Global Styles */
 
-/*This is the background of the site*/
+/* General page setup */
 body {
-  background: black;
-}
-
-
-/*This is the font used for the site*/
-body {
+  background: #121212; /* Dark background color for a sleek look */
   font-family: 'Courier New', monospace, Verdana;
+  margin: 0;
+  padding: 0;
+  color: #fff; /* Text color */
+  line-height: 1.6; /* More spacing between lines for readability */
 }
 
-/*This is the code for the cool typing effect for the title*/
-.typewriter h1 {
-    font-family: 'Courier New';
-    color: white;
-    letter-spacing: .17em;
-    margin: 0 auto;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: .17em solid pink;
-    animation: typing 3.5s steps(30, end), blinking-cursor .5s step-end infinite;
-    text-align: center;
-}
-  
-  @keyframes typing {
-    from {
-      width: 0
-    }
-    to {
-      width: 100%
-    }
-  }
-  
-  @keyframes blinking-cursor {
-    from,
-    to {
-      border-color: transparent
-    }
-    50% {
-      border-color: black;
-    }
-}
-
-/*This is the color for the text*/
-h3 {
-  color: white;
-}
-
-p1 {
-  color: white;
-}
-
-a {
-  color: white;
-}
-
-/*Header info*/
-
-.container {
-	width: 80%;
-	margin: 0 auto;
-}
-
+/* Header Section */
 header {
-  background: black;
+  background: #1a1a1a; /* Darker background for header */
+  padding: 15px 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-header::after {
-  content: '';
-  display: table;
-  clear: both;
+header .container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-  float: left;
-  padding: 10px 0;
-}
-
-nav {
-  float: right;
+  padding-left: 10px;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
 }
 
 nav ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: flex;
 }
 
 nav li {
-  display: inline-block;
-  margin-left: 70px;
-  padding-top: 23px;
-
+  margin-left: 30px;
   position: relative;
 }
 
 nav a {
   color: gray;
   text-decoration: none;
-  text-transform: uppercase;
   font-size: 14px;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 nav a:hover {
   color: white;
+  transform: scale(1.1); /* Slight zoom effect */
 }
 
 nav a::before {
   content: '';
   display: block;
-  height: 5px;
+  height: 3px;
   background-color: white;
-
   position: absolute;
   top: 0;
   width: 0%;
-
-  transition: all ease-in-out 250ms;
+  transition: all 0.3s ease;
 }
 
 nav a:hover::before {
   width: 100%;
 }
 
-
-h2 {
+/* Title Typing Effect */
+.typewriter h1 {
+  font-family: 'Courier New', monospace;
   color: white;
+  letter-spacing: 0.17em;
+  margin: 0 auto;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.17em solid pink;
+  animation: typing 3.5s steps(30, end), blinking-cursor 0.5s step-end infinite;
+  text-align: center;
 }
 
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
 
-   
+@keyframes blinking-cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Main Content */
+h2, h3 {
+  color: white;
+  text-align: center;
+}
+
+p1, p {
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Link Styles */
+a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: pink;
+}
+
+/* Add spacing between sections */
+section {
+  padding: 20px 0;
+  text-align: center;
+}
+
